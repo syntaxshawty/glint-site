@@ -1,38 +1,66 @@
-.App {
-  text-align: center;
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* cursor: url("./glintor.png") 2 2, pointer; */
+  cursor: url("./Transparent.cur"), pointer;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body,
+html {
+  height: 100%;
+  font-family: "Times New Roman", Times, serif;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+a:hover {
+  color: rgb(157, 0, 0);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh; /* Full viewport height */
 }
 
-.App-link {
-  color: #61dafb;
+.left-panel {
+  width: 50%;
+  /* background-image: url("./glintground.jpg"); */
+  padding: 20px;
+  margin: 100px;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bottom-links {
+  margin-top: 20px; /* Spacing above links */
+  display: flex;
+  gap: 10px; /* Add space between the links */
+}
+
+.contact-info {
+  align-self: center;
+  margin: 25%;
+  padding: 2em;
+}
+
+.right-panel {
+  margin-left: 50%; /* To ensure the right panel starts after the left panel */
+  width: 50%;
+  padding-left: 5em;
+  padding-top: 20%;
+  height: 100%;
+  overflow-y: auto;
+  /* background-image: linear-gradient(rgb(5, 111, 32), white); */
+  /* background-image: url("./DSC05201.JPG"); */
+}
+
+.scroll-content {
+  display: flex;
+  flex-flow: column;
+  padding-right: 20px; /* Prevent content from touching scrollbar */
 }
