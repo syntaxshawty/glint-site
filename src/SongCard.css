@@ -48,23 +48,4 @@
 
 .card-link {
   padding-left: 1em;
-  /* background-color: #4caf50;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold; */
-  /* padding: 10px 15px; */
-  /* From https://css.glass */
-  /* background: rgba(255, 255, 255, 0.31);
-  border-radius: 10px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(11.8px);
-  -webkit-backdrop-filter: blur(11.8px); */
-  /* border: 1px solid rgba(255, 255, 255, 0.5); */
-}
-
-.card-link:hover {
-  /* background-color: #45a049; */
-  cursor: pointer;
 }

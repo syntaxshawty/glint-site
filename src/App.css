@@ -4,20 +4,31 @@
   padding: 0;
   box-sizing: border-box;
   /* cursor: url("./glintor.png") 2 2, pointer; */
-  cursor: url("./Transparent.cur"), pointer;
+  cursor: url("./Ghost.cur"), pointer;
 }
 
 body,
-html {
+html::before {
   height: 100%;
-  font-family: "Times New Roman", Times, serif;
+  /* font-family: "Times New Roman", Times, serif;
+   */
+  font-family: "Almarai", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    /* Overlay */ url("paper.jpg"); /* Background image */
+  background-size: cover;
+  background-position: center;
 }
 a {
   text-decoration: none;
   color: black;
 }
 a:hover {
-  color: rgb(157, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 .container {
