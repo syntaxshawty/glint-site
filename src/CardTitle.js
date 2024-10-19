@@ -2,7 +2,6 @@ import React from "react";
 import "./SongCard.css"; // Import the CSS file
 
 const CardTitle = ({ title, url, releaseType }) => {
-  const link = `[${releaseType}]`;
   return (
     <div className="card-title">
       <p>{title}</p>
@@ -11,7 +10,7 @@ const CardTitle = ({ title, url, releaseType }) => {
         <a href={url} target="_blank" rel="noopener noreferrer">
           {releaseType}
         </a>
-        ]
+        ] &#9835;
       </p>
     </div>
   );
