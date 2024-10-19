@@ -3,7 +3,7 @@
 } */
 .card {
   display: flex;
-  width: 75%;
+  /* width: 75%; */
   /* From https://css.glass */
   background: rgba(255, 255, 255, 0);
   /* border-radius: 16px; */
@@ -66,5 +66,5 @@
 
 .card-link:hover {
   /* background-color: #45a049; */
-  cursor: pointer;
+  /* cursor: pointer; */
 }

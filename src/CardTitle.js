@@ -11,7 +11,7 @@ const CardTitle = ({ title, url, releaseType }) => {
         <a href={url} target="_blank" rel="noopener noreferrer">
           {releaseType}
         </a>
-        ]
+        ] &#9835;
       </p>
     </div>
   );

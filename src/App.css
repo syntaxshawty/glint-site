@@ -4,20 +4,73 @@
   padding: 0;
   box-sizing: border-box;
   /* cursor: url("./glintor.png") 2 2, pointer; */
-  cursor: url("./Transparent.cur"), pointer;
+  cursor: url("./Ghost.cur"), auto;
+}
+
+/* animation with gradient  */
+body {
+  background-image: linear-gradient(
+      -45deg,
+      rgba(255, 255, 255, 0.85),
+      /* Semi-transparent white */ rgba(224, 240, 255, 0.5),
+      /* Semi-transparent light blue */ rgba(245, 245, 245, 0.85),
+      /* Semi-transparent light grey */ rgba(204, 228, 246, 0.85),
+      /* Semi-transparent light blue */ rgba(208, 208, 208, 0.85),
+      /* Semi-transparent grey */ rgba(158, 184, 218, 0.85),
+      /* Semi-transparent darker blue */ rgba(214, 210, 210, 0.75),
+      /* Semi-transparent light grey */ rgba(200, 216, 232, 0.85),
+      /* Semi-transparent blue-grey */ rgba(248, 250, 251, 0.5)
+        /* Semi-transparent almost white */
+    ),
+    url("./foam2.jpg"); /* Image below gradient */
+
+  background-size: 400% 400%, cover; /* Gradient animation, image starts at cover size */
+  background-position: 0% 50%, center; /* Keep image centered, gradient moving */
+
+  animation: gradient 60s ease infinite, imageZoom 60s linear infinite; /* Gradient and image zoom */
+  height: 100vh;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%, center; /* Gradient starts moving */
+  }
+  50% {
+    background-position: 100% 50%, center; /* Gradient moves, image stays centered */
+  }
+  100% {
+    background-position: 0% 50%, center; /* Gradient resets, image still centered */
+  }
+}
+
+@keyframes imageZoom {
+  0% {
+    background-size: 400% 400%, 100%; /* Image starts at its original size */
+  }
+  50% {
+    background-size: 400% 400%, 120%; /* Image zooms in */
+  }
+  100% {
+    background-size: 400% 400%, 100%; /* Image zooms back out */
+  }
 }
 
 body,
 html {
   height: 100%;
-  font-family: "Times New Roman", Times, serif;
+  /* font-family: "Times New Roman", Times, serif; */
+
+  font-family: "Carrois Gothic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 a {
   text-decoration: none;
   color: black;
 }
 a:hover {
-  color: rgb(157, 0, 0);
+  color: rgba(255, 255, 255, 0.796);
+  /* cursor: url("./Paw\ Link.ani"), auto; */
 }
 
 .container {
@@ -43,9 +96,20 @@ a:hover {
 }
 
 .contact-info {
-  align-self: center;
-  margin: 25%;
+  align-self: start;
+  height: 12vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* justify-content: space-between; */
+  margin: 10% 25%;
   padding: 2em;
+  /* From https://css.glass */
+  /* background: rgba(255, 255, 255, 0.05);
+  border-radius: 1660px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2.6px);
+  -webkit-backdrop-filter: blur(2.6px); */
 }
 
 .right-panel {
